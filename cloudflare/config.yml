@@ -1,0 +1,13 @@
+tunnel: <your-tunnel-id>
+credentials-file: /etc/cloudflared/<your-tunnel-id>.json
+
+ingress:
+  - hostname: example.com
+    service: http://localhost:80
+  - hostname: blog.example.com
+    service: http://localhost:80
+  - hostname: nginx1.example.com
+    service: http://localhost:8081
+  - hostname: nginx2.example.com
+    service: http://localhost:8082
+  - service: http_status:404
